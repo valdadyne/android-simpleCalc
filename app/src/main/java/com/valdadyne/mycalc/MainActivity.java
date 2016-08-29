@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     Button btn9,btn8,btn7,btn6,btn5,btn4,btn3,btn2,btn1,btn0,
-           btnadd,btnsubtract,btnmultiply,btndivide,btnequals;
+           btnadd,btnsubtract,btnmultiply,btndivide,btnequals,btndecimal;
     EditText edt1 ;
 
     float mValueOne , mValueTwo ;
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button) findViewById(R.id.btn7);
         btn8 = (Button) findViewById(R.id.btn8);
         btn9 = (Button) findViewById(R.id.btn9);
+        btndecimal=(Button) findViewById(R.id.btndecimal);
 
         btnadd = (Button) findViewById(R.id.btnadd);
         btnsubtract = (Button) findViewById(R.id.btnsubtract);
@@ -102,6 +103,13 @@ public class MainActivity extends AppCompatActivity {
                 edt1.setText(edt1.getText()+"9");
             }
         });
+        btndecimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edt1.setText(edt1.getText()+".");
+            }
+        });
+
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
